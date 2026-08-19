@@ -1,0 +1,1790 @@
+/* ==========================================================================
+   INTERJAS LOGISTICS — RESPONSIVE STYLESHEET (responsive.css)
+   Consolidated media queries and responsive breakpoints for all components:
+   - Navbar, Hero, About, Stats, Services, Industry/Process, Accreditation,
+     Solutions/Tracking, Reach/Map, Footer, and Accessibility/Reduced Motion.
+   ========================================================================== */
+
+/* ==========================================================================
+   01 — GLOBAL SCROLL MARGINS (Sticky-navbar aware)
+   ========================================================================== */
+section[id],
+[id][class*="section"],
+.ds-section {
+    scroll-margin-top: 96px;
+}
+
+@media (max-width: 991.98px) {
+
+    section[id],
+    [id][class*="section"],
+    .ds-section {
+        scroll-margin-top: 84px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    section[id],
+    [id][class*="section"],
+    .ds-section {
+        scroll-margin-top: 80px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    section[id],
+    [id][class*="section"],
+    .ds-section {
+        scroll-margin-top: 76px;
+    }
+}
+
+/* ==========================================================================
+   02 — DESKTOP ENHANCEMENTS (min-width queries)
+   ========================================================================== */
+
+/* ---------- ≥ 1400px (XXL Desktop) ---------- */
+@media (min-width: 1400px) {
+    .ds-navbar {
+        padding-inline: var(--ds-space-16);
+        min-height: 84px;
+    }
+
+    .ds-navbar.is-scrolled {
+        min-height: 76px;
+    }
+
+    .ds-navbar__inner {
+        gap: var(--ds-space-12);
+    }
+
+    .ds-navbar__link {
+        padding: 0 var(--ds-space-4);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-navbar__nav-list {
+        gap: var(--ds-space-1);
+    }
+
+    .ds-navbar__logo {
+        height: 35px;
+    }
+
+    .ds-navbar.is-scrolled .ds-navbar__logo {
+        height: 28px;
+    }
+
+    .ds-navbar__actions .ds-btn--ghost {
+        padding: 0 var(--ds-space-7);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-navbar__actions .ds-btn--primary {
+        padding: 0 var(--ds-space-8);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-hero-home__content-wrap {
+        padding-left: clamp(2.5rem, 6vw, 6rem);
+    }
+}
+
+/* ---------- 1200px – 1399.98px (XL Large Desktop) ---------- */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .ds-navbar {
+        padding-inline: var(--ds-space-12);
+    }
+
+    .ds-navbar__inner {
+        gap: var(--ds-space-8);
+    }
+
+    .ds-navbar__link {
+        padding: 0 var(--ds-space-5);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-navbar__actions .ds-btn--ghost {
+        padding: 0 var(--ds-space-6);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-navbar__actions .ds-btn--primary {
+        padding: 0 var(--ds-space-7);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+}
+
+/* ---------- ≥ 1200px (Desktop Typography & Hero) ---------- */
+@media (min-width: 1200px) {
+    .ds-hero__title {
+        font-size: var(--ds-text-display-64);
+    }
+
+    .ds-hero__title--lg {
+        font-size: var(--ds-text-display-80);
+    }
+}
+
+/* ---------- 992px – 1199.98px (LG Desktop / Tablet Landscape) ---------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .ds-navbar {
+        padding-inline: var(--ds-space-8);
+        min-height: 76px;
+    }
+
+    .ds-navbar.is-scrolled {
+        min-height: 68px;
+    }
+
+    .ds-navbar__inner {
+        gap: var(--ds-space-5);
+    }
+
+    .ds-navbar__link {
+        padding: 0 var(--ds-space-4);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-navbar__nav-list {
+        gap: 0;
+    }
+
+    .ds-navbar__logo {
+        height: 32px;
+    }
+
+    .ds-navbar.is-scrolled .ds-navbar__logo {
+        height: 34px;
+    }
+
+    .ds-navbar__actions {
+        gap: var(--ds-space-3);
+    }
+
+    .ds-navbar__actions .ds-btn--ghost,
+    .ds-navbar__actions [data-ds-action="call"] {
+        display: none !important;
+    }
+
+    .ds-navbar__actions .ds-btn--primary {
+        padding: 0 var(--ds-space-4);
+        height: 40px;
+        min-height: 40px;
+        font-size: var(--ds-text-m-14);
+    }
+
+    .ds-hero-home__layout {
+        grid-template-columns: 45% 55%;
+        min-height: calc(100vh - 76px);
+    }
+
+    .ds-hero-home__content-wrap {
+        padding: var(--ds-space-10) var(--ds-space-6);
+    }
+
+    .ds-hero-home__title {
+        font-size: 36px;
+    }
+
+    .ds-hero-home__desc {
+        font-size: 20px;
+    }
+
+    .ds-stats__item {
+        padding: 0 var(--ds-space-5);
+    }
+
+    .ds-stats__number-wrap {
+        font-size: 2.2rem;
+    }
+
+    .ds-stats__label {
+        font-size: 10px;
+    }
+}
+
+/* ---------- ≥ 992px (Desktop Controls & Spacing) ---------- */
+@media (min-width: 992px) {
+    .ds-navbar__toggler {
+        display: none !important;
+    }
+
+    .ds-hero {
+        padding: var(--ds-space-20) 0;
+    }
+}
+
+/* ---------- ≥ 768px (Tablet Banner Overrides) ---------- */
+@media (min-width: 768px) {
+    .ds-cta-banner {
+        padding: var(--ds-space-16) var(--ds-space-12);
+    }
+}
+
+/* ---------- 576px – 991.98px (Stats 2-Column Grid) ---------- */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .ds-stats {
+        padding: var(--ds-space-10) 0;
+    }
+
+    .ds-stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--ds-space-8) 0;
+    }
+
+    .ds-stats__item {
+        padding: 0 var(--ds-space-6);
+    }
+
+    .ds-stats__item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .ds-stats__item:nth-child(2n + 1) {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .ds-stats__item:first-child,
+    .ds-stats__item:nth-child(3) {
+        padding-left: 0;
+    }
+}
+
+/* ==========================================================================
+   03 — MAX-WIDTH BREAKPOINTS (Desktop XL down to Mobile)
+   ========================================================================== */
+
+/* ---------- ≤ 1399.98px (XL Desktop) ---------- */
+@media (max-width: 1399.98px) {
+    .hero {
+        padding: 5rem 0 4rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+/* ---------- ≤ 1199.98px (Large Tablet / Desktop) ---------- */
+@media (max-width: 1199.98px) {
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .ds-footer__grid {
+        grid-template-columns: 1.6fr 1fr 1fr 1fr;
+        gap: var(--ds-space-8);
+    }
+
+    .ds-accreditation__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+    }
+
+    .ds-solutions__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--ds-space-8) var(--ds-space-6);
+    }
+
+    .ds-solutions__col {
+        padding: 0 var(--ds-space-4);
+    }
+
+    .ds-solutions__col:not(:last-child)::after {
+        display: none;
+    }
+
+    .ds-solutions__col:nth-child(3n - 1)::after,
+    .ds-solutions__col:nth-child(3n - 2)::after {
+        display: block;
+        right: -12px;
+        top: 60px;
+        bottom: 0;
+    }
+}
+
+/* ---------- ≤ 991.98px (MD / Tablet Portrait → Mobile) ---------- */
+@media (max-width: 991.98px) {
+    .hero {
+        padding: 4rem 0 3rem;
+        text-align: center;
+    }
+
+    .hero__description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section__title {
+        font-size: 1.75rem;
+    }
+
+    .section__subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        padding: 3rem 0 1.25rem;
+        text-align: center;
+    }
+
+    .footer__text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer__title {
+        margin-top: 2rem;
+    }
+
+    .footer__bottom {
+        margin-top: 2rem;
+    }
+
+    /* Navbar Mobile */
+    .ds-navbar {
+        padding-inline: var(--ds-space-5);
+        min-height: 72px;
+    }
+
+    .ds-navbar.is-scrolled {
+        min-height: 64px;
+    }
+
+    .ds-navbar__logo {
+        height: 32px;
+    }
+
+    .ds-navbar.is-scrolled .ds-navbar__logo {
+        height: 32px;
+    }
+
+    .ds-navbar__inner {
+        flex-wrap: wrap;
+        row-gap: 0;
+        column-gap: var(--ds-space-3);
+    }
+
+    .ds-navbar__toggler {
+        display: inline-grid;
+        order: 3;
+    }
+
+    .ds-navbar__actions {
+        order: 2;
+        margin-left: 0;
+        margin-right: auto;
+        gap: 0;
+    }
+
+    .ds-navbar__actions .ds-btn--primary {
+        display: none !important;
+    }
+
+    .ds-navbar__actions .ds-btn--ghost {
+        display: none !important;
+    }
+
+    .ds-navbar__collapse {
+        order: 99;
+        flex-basis: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition:
+            max-height var(--ds-duration-slow) var(--ds-ease-standard),
+            opacity var(--ds-duration-base) var(--ds-ease-standard),
+            visibility var(--ds-duration-base) var(--ds-ease-standard),
+            transform var(--ds-duration-base) var(--ds-ease-standard),
+            padding var(--ds-duration-slow) var(--ds-ease-standard),
+            margin var(--ds-duration-base) var(--ds-ease-standard),
+            border var(--ds-duration-base) var(--ds-ease-standard);
+    }
+
+    .ds-navbar__collapse.is-open {
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding-block: var(--ds-space-3);
+        padding-inline: var(--ds-space-2);
+        border-top: 1px solid rgba(12, 35, 64, 0.08);
+        border-bottom: 1px solid rgba(12, 35, 64, 0.08);
+        margin-block: var(--ds-space-1) 0;
+        background-color: #ffffff;
+    }
+
+    .ds-navbar__nav {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .ds-navbar__nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* Subtle divider border under every menu item only on responsive view */
+    .ds-navbar__nav-list > li {
+        width: 100%;
+        border-bottom: 1px solid rgba(12, 35, 64, 0.08);
+    }
+
+    .ds-navbar__nav-list > li:last-child {
+        border-bottom: none;
+    }
+
+    /* Left-aligned menu items */
+    .ds-navbar__link {
+        width: 100%;
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        text-align: left !important;
+        min-height: 48px;
+        height: auto;
+        padding: 13px 16px;
+        font-size: var(--ds-text-m-16);
+        font-weight: var(--ds-fw-medium);
+        border-radius: 0;
+        color: var(--ds-neutral-800);
+        background-color: transparent;
+        transform: translateX(-8px);
+        opacity: 0;
+        transition:
+            color var(--ds-duration-base) var(--ds-ease-standard),
+            background-color var(--ds-duration-base) var(--ds-ease-standard),
+            transform var(--ds-duration-base) var(--ds-ease-standard),
+            opacity var(--ds-duration-base) var(--ds-ease-standard);
+    }
+
+    /* Remove floating horizontal underline on mobile */
+    .ds-navbar__link::after {
+        display: none !important;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__link {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__nav-list>li:nth-child(1) .ds-navbar__link {
+        transition-delay: 40ms;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__nav-list>li:nth-child(2) .ds-navbar__link {
+        transition-delay: 80ms;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__nav-list>li:nth-child(3) .ds-navbar__link {
+        transition-delay: 120ms;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__nav-list>li:nth-child(4) .ds-navbar__link {
+        transition-delay: 160ms;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__nav-list>li:nth-child(5) .ds-navbar__link {
+        transition-delay: 200ms;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__nav-list>li:nth-child(6) .ds-navbar__link {
+        transition-delay: 240ms;
+    }
+
+    .ds-navbar__link:hover {
+        background-color: rgba(12, 35, 64, 0.03);
+        color: var(--ds-primary-default);
+        transform: none;
+    }
+
+    .ds-navbar__link.is-active {
+        background-color: rgba(12, 35, 64, 0.03);
+        color: var(--ds-primary-default);
+        font-weight: var(--ds-fw-semibold);
+    }
+
+    /* Mobile Dropdown styles */
+    .ds-navbar__item--has-dropdown {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ds-navbar__link--has-dropdown {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .ds-navbar__chevron {
+        transition: transform 0.25s var(--ds-ease-standard);
+    }
+
+    .ds-navbar__item--has-dropdown.is-open .ds-navbar__chevron {
+        transform: rotate(180deg);
+    }
+
+    .ds-navbar__dropdown {
+        position: static;
+        transform: none !important;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: none;
+        border: none;
+        border-top: 1px solid rgba(12, 35, 64, 0.06);
+        border-left: 3px solid var(--ds-primary-default);
+        border-radius: 0;
+        background-color: rgba(12, 35, 64, 0.025);
+        padding: 4px 0 4px 4px;
+        margin: 0;
+        display: none;
+        min-width: 100%;
+        list-style: none;
+    }
+
+    .ds-navbar__item--has-dropdown.is-open .ds-navbar__dropdown {
+        display: block;
+    }
+
+    .ds-navbar__dropdown > li {
+        width: 100%;
+        border-bottom: 1px solid rgba(12, 35, 64, 0.04);
+    }
+
+    .ds-navbar__dropdown > li:last-child {
+        border-bottom: none;
+    }
+
+    .ds-navbar__dropdown-link {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        text-align: left !important;
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: var(--ds-fw-medium);
+        color: var(--ds-neutral-700);
+        border-radius: var(--ds-radius-sm);
+        transform: translateX(-6px);
+        opacity: 0;
+        transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .ds-navbar__collapse.is-open .ds-navbar__dropdown-link {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .ds-navbar__dropdown-link:hover,
+    .ds-navbar__dropdown-link:active {
+        background-color: var(--ds-primary-light);
+        color: var(--ds-primary-default);
+    }
+
+    /* Hero Home Mobile */
+    .ds-hero-home__layout {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .ds-hero-home__content-wrap {
+        justify-content: center;
+        padding: var(--ds-space-10) var(--ds-space-6) var(--ds-space-8);
+    }
+
+    .ds-hero-home__content {
+        max-width: 600px;
+    }
+
+    .ds-hero-home__title {
+        font-size: 2.1rem;
+    }
+
+    .ds-hero-home__media {
+        min-height: 420px;
+        height: 50vh;
+    }
+
+    .ds-hero-home__badge {
+        top: var(--ds-space-4);
+        right: var(--ds-space-4);
+    }
+
+    /* About Section */
+    .ds-about {
+        padding: var(--ds-space-14) 0;
+    }
+
+    .ds-about__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--ds-space-10);
+    }
+
+    .ds-about__content,
+    .ds-about__cards-wrap {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .ds-about__title {
+        font-size: 2.25rem;
+    }
+
+    /* Services Section */
+    .ds-services {
+        padding: var(--ds-space-14) 0;
+    }
+
+    .ds-services__header {
+        flex-direction: column;
+        gap: var(--ds-space-8);
+        margin-bottom: var(--ds-space-10);
+    }
+
+    .ds-services__header-left,
+    .ds-services__header-right {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .ds-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: var(--ds-space-10);
+    }
+
+    .ds-services__card:nth-child(n) {
+        border-right: none;
+        border-bottom: 1px solid var(--ds-border-divider);
+        padding: 30px 24px;
+    }
+
+    .ds-services__card:nth-child(2n + 1) {
+        border-right: 1px solid var(--ds-border-divider);
+        padding-left: 0;
+    }
+
+    .ds-services__card:nth-child(2n) {
+        padding-right: 0;
+    }
+
+    .ds-services__card:nth-child(9) {
+        border-bottom: none;
+        grid-column: span 2;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ds-marine-banner {
+        padding: var(--ds-space-6) var(--ds-space-6);
+    }
+
+    /* Industry / Work Process (Tablet & Mobile: Image on Top, Tabs Below) */
+    .ds-industry {
+        padding: var(--ds-space-14) 0;
+    }
+
+    .ds-industry__header {
+        flex-direction: column;
+        gap: var(--ds-space-8);
+        margin-bottom: var(--ds-space-10);
+    }
+
+    .ds-industry__header-left,
+    .ds-industry__header-right {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .ds-industry__body {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--ds-space-8) !important;
+    }
+
+    .ds-industry__visual-wrap {
+        order: -1 !important;
+        width: 100% !important;
+        min-height: unset !important;
+        height: auto !important;
+    }
+
+    .ds-industry__visual-frame {
+        width: 100% !important;
+        min-height: 380px !important;
+        height: 380px !important;
+    }
+
+    .ds-industry__tabs {
+        order: 1 !important;
+        width: 100% !important;
+    }
+
+    /* Reach Section */
+    .ds-reach {
+        padding: var(--ds-space-14) 0;
+    }
+
+    .ds-reach__layout {
+        grid-template-columns: 1fr;
+        gap: var(--ds-space-12);
+    }
+
+    .ds-reach__content {
+        max-width: 600px;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ds-reach__desc {
+        text-align: center;
+    }
+
+    .ds-reach__stats-grid {
+        margin: 0 auto;
+    }
+
+    .ds-reach-map {
+        max-width: 480px;
+    }
+
+    /* Footer */
+    .ds-footer {
+        padding: var(--ds-space-12) var(--ds-space-0);
+        margin-top: 0;
+    }
+
+    .ds-footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--ds-space-8) var(--ds-space-6);
+    }
+
+    .ds-footer__brand-col {
+        grid-column: span 2;
+    }
+
+    .ds-footer__desc {
+        max-width: 50ch;
+    }
+}
+
+/* ---------- ≤ 767.98px (SM / Mobile) ---------- */
+@media (max-width: 767.98px) {
+    .hero__title {
+        font-size: 2.25rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+    .section__subtitle {
+        font-size: 0.9375rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .hero__button {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-card__icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    /* Navbar SM */
+    .ds-navbar {
+        padding-inline: var(--ds-space-4);
+        min-height: 68px;
+    }
+
+    .ds-navbar.is-scrolled {
+        min-height: 60px;
+    }
+
+    .ds-navbar__logo {
+        height: 36px;
+    }
+
+    .ds-navbar.is-scrolled .ds-navbar__logo {
+        height: 32px;
+    }
+
+    .ds-navbar__actions .ds-btn--primary,
+    .ds-navbar__actions .ds-btn--ghost {
+        display: none !important;
+    }
+
+    .ds-navbar__actions {
+        gap: 0;
+    }
+
+    .ds-navbar__collapse.is-open {
+        padding-block: var(--ds-space-2);
+        margin-block: var(--ds-space-1) 0;
+    }
+
+    .ds-navbar__link {
+        font-size: var(--ds-text-m-15);
+        padding: 12px 14px;
+    }
+
+    .ds-navbar__actions .ds-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Accreditation */
+    .ds-accreditation {
+        padding: var(--ds-space-10) 0 var(--ds-space-14);
+    }
+
+    .ds-accreditation__title {
+        font-size: 22px;
+        margin-bottom: var(--ds-space-6);
+    }
+
+    .ds-accreditation__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .ds-accreditation__card {
+        height: 84px;
+        padding: 10px;
+    }
+
+    .ds-accreditation__logo {
+        max-height: 48px;
+    }
+
+    /* Solutions */
+    .ds-solutions {
+        padding: var(--ds-space-12) 0 var(--ds-space-10);
+    }
+
+    .ds-solutions__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--ds-space-8) var(--ds-space-4);
+    }
+
+    .ds-solutions__col:not(:last-child)::after {
+        display: none;
+    }
+
+    .ds-solutions__col:nth-child(2n - 1)::after {
+        display: block;
+        right: -8px;
+        top: 50px;
+        bottom: 0;
+    }
+
+    .ds-solutions__col-title {
+        font-size: 16px;
+        min-height: unset;
+    }
+
+    .ds-solutions__col-desc {
+        font-size: 12px;
+    }
+
+    .ds-solutions__actions {
+        margin-top: var(--ds-space-8);
+    }
+}
+
+/* ---------- ≤ 575.98px (XS / Small Mobile) ---------- */
+@media (max-width: 575.98px) {
+    .hero {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .hero__title {
+        font-size: 1.875rem;
+    }
+
+    .hero__eyebrow {
+        font-size: 0.75rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section__title {
+        font-size: 1.375rem;
+    }
+
+    .section__subtitle {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero__button {
+        width: 100%;
+    }
+
+    .modal-body {
+        padding: 1.25rem;
+    }
+
+    .modal-header {
+        padding: 1rem 1.25rem;
+    }
+
+    .modal-footer {
+        padding: 0.75rem 1.25rem;
+    }
+
+    /* Navbar XS */
+    .ds-navbar {
+        padding-inline: var(--ds-space-3);
+        min-height: 64px;
+    }
+
+    .ds-navbar.is-scrolled {
+        min-height: 56px;
+    }
+
+    .ds-navbar__inner {
+        column-gap: var(--ds-space-2);
+    }
+
+    .ds-navbar__logo {
+        height: 34px;
+    }
+
+    .ds-navbar.is-scrolled .ds-navbar__logo {
+        height: 30px;
+    }
+
+    .ds-navbar__icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ds-navbar__actions {
+        gap: 0;
+    }
+
+    .ds-navbar__actions .ds-btn--ghost,
+    .ds-navbar__actions .ds-btn--primary {
+        display: none !important;
+    }
+
+    .ds-navbar__collapse.is-open {
+        padding-inline: var(--ds-space-1);
+        padding-block: var(--ds-space-2);
+        margin-block: var(--ds-space-1) 0;
+    }
+
+    .ds-navbar__link {
+        padding: 12px 14px;
+        font-size: var(--ds-text-m-15);
+    }
+
+    /* Hero Home XS */
+    .ds-hero-home__content-wrap {
+        padding: var(--ds-space-8) var(--ds-space-4) var(--ds-space-6);
+    }
+
+    .ds-hero-home__title {
+        font-size: 1.75rem;
+        margin-bottom: var(--ds-space-4);
+    }
+
+    .ds-hero-home__desc {
+        font-size: var(--ds-text-body-sm);
+        margin-bottom: var(--ds-space-6);
+    }
+
+    .ds-hero-home__actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .ds-hero-home__btn-primary,
+    .ds-hero-home__btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .ds-hero-home__media {
+        min-height: 300px;
+        height: 40vh;
+    }
+
+    .ds-hero-home__badge {
+        top: var(--ds-space-3);
+        right: var(--ds-space-3);
+        padding: var(--ds-space-2) var(--ds-space-3);
+    }
+
+    .ds-hero-home__badge-title {
+        font-size: var(--ds-text-body-xs);
+    }
+
+    .ds-hero-home__badge-subtitle {
+        font-size: 10px;
+    }
+
+    /* About Section XS */
+    .ds-about {
+        padding: var(--ds-space-10) 0;
+    }
+
+    .ds-about__title {
+        font-size: 1.85rem;
+        margin-bottom: var(--ds-space-4);
+    }
+
+    .ds-about__desc {
+        font-size: var(--ds-text-body-sm);
+        margin-bottom: var(--ds-space-3);
+    }
+
+    .ds-about__btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .ds-about-card {
+        padding: 14px 18px;
+        gap: var(--ds-space-4);
+    }
+
+    .ds-about-card__title {
+        font-size: 15px;
+    }
+
+    /* Stats Section XS */
+    .ds-stats {
+        padding: var(--ds-space-8) 0;
+    }
+
+    .ds-stats__grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .ds-stats__item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding: var(--ds-space-5) 0;
+    }
+
+    .ds-stats__item:first-child {
+        padding-top: 0;
+    }
+
+    .ds-stats__item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .ds-stats__number-wrap {
+        font-size: 2.15rem;
+    }
+
+    .ds-stats__label {
+        font-size: 10.5px;
+    }
+
+    /* Services Section XS */
+    .ds-services {
+        padding: var(--ds-space-10) 0;
+    }
+
+    .ds-services__title {
+        font-size: 1.85rem;
+    }
+
+    .ds-services__btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .ds-services__grid {
+        grid-template-columns: 1fr;
+        margin-bottom: var(--ds-space-8);
+    }
+
+    .ds-services__card:nth-child(n) {
+        border-right: none !important;
+        border-bottom: 1px solid var(--ds-border-divider) !important;
+        padding: 24px 0 !important;
+        grid-column: span 1 !important;
+    }
+
+    .ds-services__card:last-child {
+        border-bottom: none !important;
+    }
+
+    .ds-marine-banner {
+        min-height: 150px;
+        padding: var(--ds-space-5) var(--ds-space-4);
+    }
+
+    .ds-marine-banner__content {
+        gap: var(--ds-space-4);
+    }
+
+    .ds-marine-banner__icon-wrap {
+        width: 38px;
+        height: 38px;
+    }
+
+    .ds-marine-banner__icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .ds-marine-banner__title {
+        font-size: 24px;
+        font-weight: var(--ds-fw-regular);
+    }
+
+    .ds-marine-banner__subtitle {
+        font-size: 13px;
+    }
+
+    /* Industry / Work Process XS */
+    .ds-industry {
+        padding: var(--ds-space-10) 0;
+    }
+
+    .ds-industry__title {
+        font-size: 1.85rem;
+    }
+
+    .ds-industry-tab {
+        padding: 12px 16px;
+        gap: 12px;
+    }
+
+    .ds-industry-tab__title {
+        font-size: 15px;
+    }
+
+    .ds-industry-tab__desc {
+        font-size: 12px;
+    }
+
+    .ds-industry__body {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--ds-space-6) !important;
+    }
+
+    .ds-industry__visual-wrap {
+        order: -1 !important;
+        width: 100% !important;
+        min-height: unset !important;
+        height: auto !important;
+    }
+
+    .ds-industry__visual-frame {
+        width: 100% !important;
+        min-height: 280px !important;
+        height: 280px !important;
+        border-radius: 14px !important;
+    }
+
+    .ds-industry__tabs {
+        order: 1 !important;
+        width: 100% !important;
+    }
+
+    /* Accreditation XS */
+    .ds-accreditation__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .ds-accreditation__card {
+        height: 80px;
+    }
+
+    .ds-accreditation__logo {
+        max-height: 44px;
+    }
+
+    /* Solutions XS */
+    .ds-solutions__grid {
+        grid-template-columns: 1fr;
+        gap: var(--ds-space-6);
+    }
+
+    .ds-solutions__col {
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: var(--ds-space-5);
+    }
+
+    .ds-solutions__col:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .ds-solutions__col::after {
+        display: none !important;
+    }
+
+    .ds-solutions__btn {
+        width: 100%;
+    }
+
+    /* Reach Section XS */
+    .ds-reach {
+        padding: var(--ds-space-10) 0;
+    }
+
+    .ds-reach__title {
+        font-size: 28px;
+    }
+
+    .ds-reach__desc {
+        font-size: 14px;
+    }
+
+    .ds-reach__stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .ds-reach-stat-card {
+        padding: 16px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .ds-reach-stat-card__value {
+        font-size: 20px;
+    }
+
+    .ds-reach-map {
+        max-width: 100%;
+    }
+
+    .ds-reach-marker__badge {
+        font-size: 9.5px;
+        padding: 2px 6px;
+    }
+
+    .ds-reach-marker__dot {
+        width: 6px;
+        height: 6px;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+    }
+
+    .ds-reach-pin {
+        width: 22px;
+        height: 22px;
+    }
+
+    .ds-reach-pin__dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .ds-reach-pin__ripple {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Footer XS */
+    .ds-footer {
+        padding: var(--ds-space-10) var(--ds-space-0);
+        margin-top: 0;
+    }
+
+    .ds-footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--ds-space-7);
+    }
+
+    .ds-footer__brand-col {
+        grid-column: span 1;
+    }
+
+    .ds-footer__logo {
+        height: 32px;
+    }
+}
+
+/* ---------- ≤ 379.98px (XXS / Tiny Mobile) ---------- */
+@media (max-width: 379.98px) {
+    .ds-navbar {
+        padding-inline: var(--ds-space-3);
+        min-height: 60px;
+    }
+
+    .ds-navbar.is-scrolled {
+        min-height: 54px;
+    }
+
+    .ds-navbar__actions .ds-btn--primary,
+    .ds-navbar__actions .ds-btn--ghost {
+        display: none !important;
+    }
+
+    .ds-navbar__actions .ds-btn--primary svg {
+        display: none;
+    }
+
+    .ds-navbar__logo {
+        height: 32px;
+    }
+
+    .ds-navbar.is-scrolled .ds-navbar__logo {
+        height: 28px;
+    }
+
+    .ds-navbar__collapse.is-open {
+        border-top: none;
+        border-bottom: none;
+        margin-block: var(--ds-space-1) 0;
+    }
+}
+
+/* ==========================================================================
+   04 — ACCESSIBILITY: PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    .ds-hero-slider__slide,
+    .ds-industry__img,
+    .ds-industry-tab,
+    .ds-accreditation__card,
+    .ds-accreditation__logo,
+    .ds-solutions__icon-box,
+    .ds-solutions__btn,
+    .ds-reach__cta-btn,
+    .ds-reach-stat-card,
+    .ds-reach-marker,
+    .ds-reach-pin__ripple,
+    .ds-loader__icon,
+    .ds-loader__animated-text span,
+    .ds-loader__dots i,
+    .ds-loader__bar,
+    .ds-footer::before,
+    .ds-footer::after {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .ds-reach-map__dot {
+        animation: none !important;
+        transform: none !important;
+        fill: #DDE4EF !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ==========================================================================
+   05 — INNER SERVICE PAGES (Air Freight, Sea Freight, etc.)
+   ========================================================================== */
+
+/* ---------- Tablet & Mobile (991.98px and down) ---------- */
+@media (max-width: 991.98px) {
+    .ds-inner-hero {
+        padding: var(--ds-space-10) 0;
+    }
+
+    .ds-inner-hero__title {
+        font-size: 34px;
+    }
+
+    .ds-inner-main {
+        padding: 56px 0 72px;
+    }
+
+    /* Hide VERTICAL FOCUS and QUICK LINKS sidebar on mobile/tablet */
+    .ds-sidebar {
+        display: none !important;
+    }
+
+    .ds-service-article {
+        padding-left: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ds-service-header__title {
+        font-size: 23px;
+    }
+
+    .ds-service-cta {
+        padding: var(--ds-space-6) var(--ds-space-8);
+    }
+
+    .ds-service-cta__title {
+        font-size: 21px;
+    }
+}
+
+/* ---------- Mobile Landscape & Portrait (767.98px) ---------- */
+@media (max-width: 767.98px) {
+    .ds-inner-hero {
+        padding: var(--ds-space-8) 0;
+    }
+
+    .ds-inner-hero__title {
+        font-size: 28px;
+    }
+
+    .ds-inner-main {
+        padding: 48px 0 64px;
+    }
+
+    .ds-service-header {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--ds-space-4);
+    }
+
+    .ds-service-header__title {
+        font-size: 20px;
+    }
+
+    .ds-service-body {
+        font-size: 14.5px;
+        line-height: 1.65;
+    }
+
+    .ds-service-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--ds-space-6);
+        gap: var(--ds-space-5);
+    }
+
+    .ds-service-cta__btn {
+        width: 100%;
+    }
+}
+
+/* ---------- Small Mobile (575.98px) ---------- */
+@media (max-width: 575.98px) {
+    .ds-inner-hero__title {
+        font-size: 24px;
+    }
+
+    .ds-service-header__icon-wrap {
+        width: 44px;
+        height: 44px;
+    }
+
+    .ds-service-header__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .ds-service-header__title {
+        font-size: 18px;
+    }
+
+    .ds-service-cta__title {
+        font-size: 19px;
+    }
+
+    .ds-service-cta__desc {
+        font-size: 13.5px;
+    }
+}
+
+/* ==========================================================================
+   06 — REQUEST QUOTE PAGE (.ds-quote-page)
+   ========================================================================== */
+
+/* ---------- Tablet & Mobile (991.98px) ---------- */
+@media (max-width: 991.98px) {
+    .ds-quote-page {
+        padding-top: calc(var(--ds-navbar-height, 80px) + 28px);
+        padding-bottom: 44px;
+    }
+
+    .ds-quote-info {
+        padding-right: 0;
+        margin-bottom: var(--ds-space-8);
+    }
+
+    .ds-quote-info__title {
+        font-size: 36px;
+    }
+
+    .ds-quote-card {
+        padding: var(--ds-space-8) var(--ds-space-6);
+    }
+}
+
+/* ---------- Small Mobile (575.98px) ---------- */
+@media (max-width: 575.98px) {
+    .ds-quote-page {
+        padding-top: calc(var(--ds-navbar-height, 80px) + 20px);
+        padding-bottom: 36px;
+    }
+
+    .ds-quote-info__title {
+        font-size: 28px;
+    }
+
+    .ds-quote-info__desc {
+        font-size: 14.5px;
+        margin-bottom: var(--ds-space-6);
+    }
+
+    .ds-quote-contact__item {
+        gap: var(--ds-space-2);
+    }
+
+    .ds-quote-contact__icon-box {
+        width: 70px;
+        height: 38px;
+    }
+
+    .ds-quote-card {
+        padding: var(--ds-space-6) var(--ds-space-4);
+        border-radius: var(--ds-radius-xl);
+    }
+
+    .ds-quote-form__control {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================================================
+   07 — CONSULTANCY PAGE (.ds-consultancy)
+   ========================================================================== */
+
+/* ---------- Mobile Landscape & Portrait (767.98px) ---------- */
+@media (max-width: 767.98px) {
+    .ds-consultancy-grid {
+        grid-template-columns: 1fr;
+        gap: var(--ds-space-2);
+    }
+
+    .ds-consultancy-card {
+        padding: var(--ds-space-5) var(--ds-space-4);
+        border-radius: var(--ds-radius-xl);
+    }
+
+    .ds-consultancy-callout {
+        padding: var(--ds-space-4) var(--ds-space-4);
+    }
+}
+
+/* ==========================================================================
+   08 — ABOUT US PAGE (.about-page)
+   ========================================================================== */
+
+/* ---------- Large Desktop / Medium Screen (1199.98px) ---------- */
+@media (max-width: 1199.98px) {
+    .about-milestones-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ---------- Tablet & Mobile (991.98px) ---------- */
+@media (max-width: 991.98px) {
+    .about-page-main {
+        padding: var(--ds-space-10) 0 var(--ds-space-14);
+    }
+
+    .about-story {
+        margin-bottom: var(--ds-space-10);
+    }
+
+    .about-story__content {
+        margin-bottom: var(--ds-space-8);
+    }
+
+    .about-stats {
+        padding: var(--ds-space-8) var(--ds-space-4);
+        margin-bottom: var(--ds-space-12);
+    }
+
+    .about-milestones-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--ds-space-3);
+    }
+}
+
+/* ---------- Small Mobile (575.98px) ---------- */
+@media (max-width: 575.98px) {
+    .about-page-main {
+        padding: var(--ds-space-8) 0 var(--ds-space-12);
+    }
+
+    .about-stats {
+        padding: var(--ds-space-6) var(--ds-space-2);
+        border-radius: var(--ds-radius-xl);
+    }
+
+    .about-stat-item {
+        padding: var(--ds-space-3) var(--ds-space-2);
+    }
+
+    .about-stat-item__number {
+        font-size: 32px;
+    }
+
+    .about-milestones-grid {
+        grid-template-columns: 1fr;
+        gap: var(--ds-space-3);
+    }
+
+    .about-milestone-card {
+        padding: var(--ds-space-4) var(--ds-space-4);
+    }
+}
+
+/* ==========================================================================
+   09 — NETWORK PAGE (.network-page)
+   ========================================================================== */
+
+/* ---------- Tablet & Mobile (991.98px) ---------- */
+@media (max-width: 991.98px) {
+    .network-page-main {
+        padding: var(--ds-space-8) 0 var(--ds-space-14);
+    }
+
+    .network-stats {
+        padding: var(--ds-space-6) var(--ds-space-4);
+        margin-bottom: var(--ds-space-10);
+    }
+
+    .network-map-card {
+        position: static;
+        margin-bottom: var(--ds-space-10);
+    }
+}
+
+/* ---------- Mobile Landscape & Portrait (767.98px) ---------- */
+@media (max-width: 767.98px) {
+    .network-stat-item {
+        padding: var(--ds-space-2) var(--ds-space-2);
+    }
+
+    .network-stat-item__number {
+        font-size: 26px;
+    }
+
+    .network-stat-item__label {
+        font-size: 10px;
+    }
+
+    .office-card--featured {
+        padding: var(--ds-space-5) var(--ds-space-4);
+    }
+
+    .office-card {
+        padding: var(--ds-space-4);
+    }
+}
+
+/* ---------- Small Mobile (575.98px) ---------- */
+@media (max-width: 575.98px) {
+    .network-page-main {
+        padding: var(--ds-space-6) 0 var(--ds-space-10);
+    }
+
+    .network-stats {
+        padding: var(--ds-space-4) var(--ds-space-2);
+        border-radius: var(--ds-radius-xl);
+    }
+
+    .network-map-card {
+        padding: var(--ds-space-4) var(--ds-space-3);
+        border-radius: var(--ds-radius-xl);
+    }
+
+    .network-filter-btn {
+        padding: 5px 14px;
+        font-size: 12px;
+    }
+
+    .office-action-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}
